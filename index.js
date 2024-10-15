@@ -1,25 +1,26 @@
 const fahrenheitTemp = prompt ("Please enter a temperature in degrees Fahrenheit to be converted into degrees Celsius:");
 
 const convertToCelsius = (num1) => {
-  celciusTemp = (num1 - 32) * (5/9);
+  const celciusTemp = (num1 - 32) * (5/9);
+  return celciusTemp;
 }
 
 const describeTemperature = (num1) => {
   if(num1<32) {
-    return description = `very cold`;
+    return `very cold`;
   } else if(num1<64) {
-    return description = `cold`;
+    return `cold`;
   } else if(num1<86) {
-    return description = `warm`;
+    return `warm`;
   } else if(num1<100) {
-    return description = `hot`;
+    return `hot`;
   } else {
-    return description = `very hot`;
+    return `very hot`;
   }
-  }
+}
 
-convertToCelsius (Number(fahrenheitTemp));
+const convertedTemp = convertToCelsius (Number(fahrenheitTemp));
 
-describeTemperature (fahrenheitTemp);
+const description = describeTemperature (fahrenheitTemp);
 
-alert (`${fahrenheitTemp} degrees Fahrenheit is equal to ${celciusTemp} degrees Celsius. This temperature feels ${description}!`);
+alert (`${fahrenheitTemp} degrees Fahrenheit is equal to ${convertedTemp} degrees Celsius. This temperature feels ${description}!`);
